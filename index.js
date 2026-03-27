@@ -3,8 +3,9 @@ var app = express(); //instanciation d'une application Express
 
 // Pour s'assurer que l'on peut faire des appels AJAX au serveur
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Origin", "https://front-archiapp.onrender.com");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   next();
 });
 
